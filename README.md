@@ -13,7 +13,22 @@ Face Recognition is a computer application that is capable of `detecting, tracki
 - Step 2: Posing and Projecting Faces
 - Step 3: Encoding Faces
 - Step 4: Finding the person’s name from the encoding
+## Recording Attendance to CSV File
+```
+with open('Attendance.csv','r+') as f:
+        myDataList = f.readlines()
+        nameList = []
+        for line in myDataList:
+            entry = line.split(',')
+            nameList.append(entry[0])
+        if name not in nameList:
+            now = datetime.now()
+            dtString = now.strftime('%H:%M')
+            today = date.today()
+            d1 = today.strftime("%d/%m/%Y")
+            f.writelines(f'\n{name},{dtString},{d1}')
+```
 ## Screenshort
 <picture>
-  <img src="Screenshort(9).jpg">
+  <img src="Screenshot (29).png">
 </picture>
