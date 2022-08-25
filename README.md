@@ -13,3 +13,7 @@ Face Recognition is a computer application that is capable of `detecting, tracki
 - Step 2: Posing and Projecting Faces
 - Step 3: Encoding Faces
 - Step 4: Finding the person’s name from the encoding
+## Screenshort
+<picture>
+  <img src="Screenshort(9).jpg">
+</picture>
