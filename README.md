@@ -27,6 +27,32 @@ with open('Attendance.csv','r+') as f:
             d1 = today.strftime("%d/%m/%Y")
             f.writelines(f'\n{name},{dtString},{d1}')
 ```
+## Sending Confirmation Through Email
+By using the smtp server there is a possibility to send the mails through python 
+```
+import smtplib
+from email.message import EmailMessage
+#%store -r dic
+
+def email(sub,body,to):
+    msg=EmailMessage()
+    msg.set_content(body)
+    msg['subject']=sub
+    msg['to']=to
+    
+    user="latish9347@gmail.com"
+    msg['from']=user
+    password="XXXXXXXXXXXX"
+    
+    server=smtplib.SMTP("smtp.gmail.com",587)
+    server.starttls()
+    server.login(user,password)
+    server.send_message(msg)
+    server.quit()
+email("Hey!","Your attendence have been marked","maradanasailathish123@gmail.com")
+        
+    
+```
 ## Screenshort
 <picture>
   <img src="Screenshot (29).png">
