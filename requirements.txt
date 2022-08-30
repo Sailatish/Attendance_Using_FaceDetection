@@ -1,5 +1,7 @@
 streamlit==1.12.2
 numpy==1.23.1
+cmake==3.24.1
+dlib==19.24.0
 opencv-python==4.6.0.66
 SMTPEmail==0.4.2
 DateTime==4.5
